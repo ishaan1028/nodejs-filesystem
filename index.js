@@ -5,7 +5,7 @@ const express = require("express");
 const fs = require("fs");
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = 3001;
 const dir = "D:/filesystem";
 
 // Middlewares
@@ -22,4 +22,4 @@ app.get("/", (req, res) => {
     res.send("check directory filesystem created at D drive! use /create to create and /fetch to fetch files!");
 });
 
-app.listen(port, () => { console.log("server at 3001!") });
+app.listen(process.env.PORT || port);
