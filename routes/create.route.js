@@ -20,7 +20,7 @@ createRouter.get("/", (req, res) => {
     fs.writeFile(`D:/filesystem/${dateTime}.txt`, `${timeStamp}`, (err) => {
         if (err) console.log(err);
     });
-    res.send("File created successfully! use /fetch or manually check the folder to verify.");
+    res.send("File created successfully! use /fetch to get all the files.");
 
 });
 

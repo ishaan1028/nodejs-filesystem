@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
     }
-    res.send("check directory filesystem created at D drive! use /create to create and /fetch to fetch files!");
+    res.send("Directory created! use /create to create and /fetch to fetch files!");
 });
 
 app.listen(process.env.PORT || port);
