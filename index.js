@@ -11,9 +11,6 @@ const app = express();
 const port = 3001;
 const dir = "D:/filesystem";
 
-const dirnamePath = path.join(__dirname, '/picturesdirname');
-const dirPath = path.join(dir, '/picturesdir');
-
 // Middlewares
 app.use("/create", createRouter);
 
@@ -24,9 +21,6 @@ app.get("/", (req, res) => {
 
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
-        fs.mkdirSync(dirnamePath);
-        fs.mkdirSync(dirPath);
-
     }
     res.send("check directory filesystem created at D drive! use /create to create and /fetch to fetch files!");
 });
